@@ -17,8 +17,13 @@ public class Jquery {
 		WebElement to = driver.findElement(By.id("droppable"));
 		Actions action = new Actions(driver);
 		action.dragAndDrop(from, to).build().perform();
-		driver.switchTo().parentFrame();
+//		driver.findElement(By.linkText("Resizable")).click();
+//		driver.switchTo().parentFrame();
+//		driver.findElement(By.linkText("Resizable")).click();
+
 		driver.switchTo().defaultContent();
+		driver.findElement(By.linkText("Resizable")).click();
+
 
 	}
 
